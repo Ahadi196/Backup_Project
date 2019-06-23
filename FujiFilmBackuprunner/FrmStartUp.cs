@@ -60,6 +60,7 @@ namespace FujiFilmBackuprunner
             external.MdiParent = this;
             external.Show();
         }
+
             // CLOSE ACTIVE CHILD
         private void CloseMenuItem_Click(object sender, EventArgs e)
         {

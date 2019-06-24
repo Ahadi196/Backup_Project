@@ -28,27 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnbackup = new System.Windows.Forms.Button();
+            this.txtlog = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // btnbackup
             // 
-            this.button1.Location = new System.Drawing.Point(12, 48);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(305, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Back up ";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnbackup.Location = new System.Drawing.Point(12, 48);
+            this.btnbackup.Name = "btnbackup";
+            this.btnbackup.Size = new System.Drawing.Size(305, 23);
+            this.btnbackup.TabIndex = 0;
+            this.btnbackup.Text = "Back up ";
+            this.btnbackup.UseVisualStyleBackColor = true;
+            this.btnbackup.Click += new System.EventHandler(this.Btnbackup_Click);
             // 
-            // textBox1
+            // txtlog
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 77);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(305, 224);
-            this.textBox1.TabIndex = 1;
+            this.txtlog.Location = new System.Drawing.Point(12, 77);
+            this.txtlog.Multiline = true;
+            this.txtlog.Name = "txtlog";
+            this.txtlog.Size = new System.Drawing.Size(305, 224);
+            this.txtlog.TabIndex = 1;
             // 
             // label1
             // 
@@ -66,8 +67,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(329, 313);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.txtlog);
+            this.Controls.Add(this.btnbackup);
             this.Name = "frmNetstore1";
             this.Text = "Netstore 1";
             this.ResumeLayout(false);
@@ -77,8 +78,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnbackup;
+        private System.Windows.Forms.TextBox txtlog;
         private System.Windows.Forms.Label label1;
     }
 }

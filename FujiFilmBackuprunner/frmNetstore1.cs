@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +17,19 @@ namespace FujiFilmBackuprunner
         public frmNetstore1()
         {
             InitializeComponent();
+        }
+
+        private void Btnbackup_Click(object sender, EventArgs e)
+        {
+            using (Process backup = new Process())
+            {
+                backup.StartInfo.FileName = "ipconfig";
+                backup.StartInfo.UseShellExecute = false;
+                backup.StartInfo.RedirectStandardOutput = true;
+                backup.Start();
+                txtlog.Text = backup.StandardOutput.ReadToEnd();
+            }
+
         }
     }
 }

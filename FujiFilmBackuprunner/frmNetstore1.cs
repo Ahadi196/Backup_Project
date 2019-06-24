@@ -17,13 +17,17 @@ namespace FujiFilmBackuprunner
         public frmNetstore1()
         {
             InitializeComponent();
+            
         }
 
         private void Btnbackup_Click(object sender, EventArgs e)
         {
             using (Process backup = new Process())
             {
-                backup.StartInfo.FileName = "ipconfig";
+                string fileName = "ipconfig.bat";
+                string path = Path.Combine(Application.StartupPath, @"Net1Scripts\", fileName);
+                Console.WriteLine(path);
+                backup.StartInfo.FileName = path;
                 backup.StartInfo.UseShellExecute = false;
                 backup.StartInfo.RedirectStandardOutput = true;
                 backup.Start();

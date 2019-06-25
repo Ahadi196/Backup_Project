@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtlog = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -43,13 +43,15 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Netstore 3 Backup";
             // 
-            // textBox1
+            // txtlog
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 77);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(305, 224);
-            this.textBox1.TabIndex = 4;
+            this.txtlog.Location = new System.Drawing.Point(12, 77);
+            this.txtlog.Multiline = true;
+            this.txtlog.Name = "txtlog";
+            this.txtlog.ReadOnly = true;
+            this.txtlog.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtlog.Size = new System.Drawing.Size(305, 224);
+            this.txtlog.TabIndex = 4;
             // 
             // button1
             // 
@@ -59,6 +61,7 @@
             this.button1.TabIndex = 3;
             this.button1.Text = "Back up ";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // frmNetstore3
             // 
@@ -66,7 +69,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(329, 313);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtlog);
             this.Controls.Add(this.button1);
             this.Name = "frmNetstore3";
             this.Text = "Netstore 3";
@@ -78,7 +81,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtlog;
         private System.Windows.Forms.Button button1;
     }
 }

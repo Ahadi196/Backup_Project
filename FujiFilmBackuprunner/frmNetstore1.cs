@@ -27,7 +27,7 @@ namespace FujiFilmBackuprunner
                 string fileName = "ipconfig.bat";
                 string path = Path.Combine(Application.StartupPath, @"Net1Scripts\", fileName);
                 Console.WriteLine(path);
-                backup.StartInfo.FileName = path;
+                backup.StartInfo.FileName = "ipconfig";
                 backup.StartInfo.UseShellExecute = false;
                 backup.StartInfo.RedirectStandardOutput = true;
                 backup.Start();
